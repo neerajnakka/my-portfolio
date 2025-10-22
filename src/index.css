@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Dark Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Dark theme colors - Primary palette */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 189 94% 55%;
+    --primary-foreground: 222 47% 5%;
+
+    --secondary: 263 70% 65%;
+    --secondary-foreground: 222 47% 5%;
+
+    --accent: 189 94% 55%;
+    --accent-foreground: 222 47% 5%;
+
+    --muted: 222 47% 12%;
+    --muted-foreground: 215 16% 60%;
+
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 47% 15%;
+    --input: 222 47% 15%;
+    --ring: 189 94% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradient colors */
+    --gradient-cyan: 189 94% 55%;
+    --gradient-blue: 217 91% 60%;
+    --gradient-purple: 263 70% 65%;
+    --gradient-pink: 330 80% 70%;
+    --gradient-emerald: 160 84% 50%;
+
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 189 94% 55%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 222 47% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 47% 15%;
+    --sidebar-ring: 189 94% 55%;
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(at 0% 0%, hsl(var(--gradient-cyan) / 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(var(--gradient-purple) / 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsl(var(--gradient-blue) / 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(var(--gradient-cyan) / 0.15) 0px, transparent 50%);
+  }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--gradient-cyan))] via-[hsl(var(--gradient-blue))] to-[hsl(var(--gradient-purple))];
+  }
+
+  .text-gradient-green {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--gradient-emerald))] to-[hsl(var(--gradient-cyan))];
+  }
+
+  .text-gradient-purple {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--gradient-purple))] to-[hsl(var(--gradient-pink))];
+  }
+
+  /* Glass morphism cards */
+  .card-glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-[hsl(var(--gradient-cyan))] to-[hsl(var(--gradient-blue))] hover:from-[hsl(var(--gradient-cyan)/0.9)] hover:to-[hsl(var(--gradient-blue)/0.9)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-[hsl(var(--gradient-cyan)/0.25)] hover:shadow-xl hover:shadow-[hsl(var(--gradient-cyan)/0.4)];
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 hover:bg-white/20 backdrop-blur-xl border border-white/20 hover:border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300;
+  }
+
+  /* Glow effects */
+  .glow-cyan {
+    box-shadow:
+      0 0 20px hsl(var(--gradient-cyan) / 0.3),
+      0 0 40px hsl(var(--gradient-cyan) / 0.2),
+      0 0 60px hsl(var(--gradient-cyan) / 0.1);
+  }
+
+  .glow-purple {
+    box-shadow:
+      0 0 20px hsl(var(--gradient-purple) / 0.3),
+      0 0 40px hsl(var(--gradient-purple) / 0.2),
+      0 0 60px hsl(var(--gradient-purple) / 0.1);
+  }
+
+  .glow-green {
+    box-shadow:
+      0 0 20px hsl(var(--gradient-emerald) / 0.3),
+      0 0 40px hsl(var(--gradient-emerald) / 0.2),
+      0 0 60px hsl(var(--gradient-emerald) / 0.1);
+  }
+}
+
+/* Gradient border effect */
+.gradient-border {
+  position: relative;
+  background: hsl(var(--card));
+  border-radius: var(--radius);
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, hsl(var(--gradient-cyan)), hsl(var(--gradient-purple)));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image: 
+    linear-gradient(hsl(var(--border)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
