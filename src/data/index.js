@@ -1,59 +1,105 @@
-export const HERO_CONTENT = "Passionate Full-Stack Developer and DevOps Engineer with expertise in building scalable web applications and cloud-native solutions. I transform ideas into production-ready applications with modern technologies and best practices.";
+export const HERO_CONTENT = 
+  "Building scalable systems from code to cloud. DevOps & Cloud Engineer | Full-Stack Developer. Passionate about automating deployments, optimizing cloud infrastructure, and developing robust web applications with modern technologies.";
 
-export const ABOUT_TEXT = "I am a dedicated Full-Stack Developer and DevOps Engineer with a strong foundation in modern web technologies and cloud infrastructure. My journey in technology is driven by a passion for creating efficient, scalable solutions that solve real-world problems. I specialize in building full-stack applications using React, Node.js, and MongoDB, while also implementing robust CI/CD pipelines and cloud deployments. With hands-on experience in AWS, Docker, and Kubernetes, I bridge the gap between development and operations to deliver seamless user experiences.";
+export const ABOUT_TEXT = 
+  "I design, automate, and deploy systems that turn code into production-grade reality. My journey began with full-stack development—building web apps with Java, React, and Node.js. Over time, that foundation evolved into a passion for DevOps and Cloud Engineering, where I now focus on crafting scalable infrastructure, clean CI/CD pipelines, and resilient deployments. I work across AWS and OCI, orchestrate containers with Docker and Kubernetes, and define infrastructure with Terraform and automation scripts. Behind the command line, I’m equally comfortable in version control and workflow automation, using Git, GitHub, and GitLab CI/CD to bridge collaboration and delivery. For me, DevOps isn’t just about speed—it’s about precision, repeatability, and creating systems that empower developers to ship confidently and innovate faster.";
 
 export const SKILLS = [
-  { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-  { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-  { name: 'Express', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
-  { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
   { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' },
-  { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-  { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+  { name: 'OCI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg' },
+  { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
   { name: 'Kubernetes', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
+  { name: 'Terraform', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg' },
+  { name: 'Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
+  { name: 'Jenkins', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg' },
+  { name: 'GitHub Actions', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+  { name: 'GitLab CI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg' },
+  { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+  { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+  { name: 'React.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+  { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+  { name: 'Oracle SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg' },
+  { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+  { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
 ];
 
 export const PROJECTS = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform with user authentication, product management, shopping cart, and payment integration using Stripe.',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'JWT'],
-    githubLink: 'https://github.com/neerajnakka',
-    websiteLink: 'https://example.com',
-    category: 'fullstack'
+    title: 'Amazon Clone — EKS & ArgoCD Deployment',
+    image: 'https://images.unsplash.com/photo-1631183054802-6e1f01a8b6b3?q=80&w=2000',
+    description:
+      'Deployed a production-grade Amazon Clone on AWS EKS with full GitOps automation via ArgoCD. Integrated CI/CD pipelines using GitHub Actions, containerized microservices with Docker, and managed configuration using Kustomize for seamless auto-sync deployments.',
+    technologies: [
+      'AWS EKS',
+      'Kubernetes',
+      'ArgoCD',
+      'GitHub Actions',
+      'Kustomize',
+      'Docker',
+      'Terraform',
+    ],
+    category: 'devops',
+    githubLink: 'https://github.com/neerajnakka/amazon-clone-k8s-eks-argoCD',
+    websiteLink: '',
+  },
+  {
+    title: 'Next.js CI/CD Pipeline with Docker & Kubernetes',
+    image: 'https://images.unsplash.com/photo-1612831455543-9b1b19b9ad3c?q=80&w=2000',
+    description:
+      'Developed and containerized a Next.js application, deploying it to Kubernetes clusters using GitHub Actions for automated CI/CD. Implemented multi-stage Docker builds, health probes, resource limits, and rolling updates for high availability.',
+    technologies: ['Next.js', 'Docker', 'Kubernetes', 'GitHub Actions', 'GHCR'],
+    category: 'devops',
+    githubLink: 'https://github.com/neerajnakka/nextjs-docker-kubernetes-app',
+    websiteLink: '',
+  },
+  {
+    title: 'Realtime Chat App — MERN + Socket.IO',
+    image: 'https://images.unsplash.com/photo-1590608897129-79da98d159ab?q=80&w=2000',
+    description:
+      'Developed a real-time chat application using the MERN stack with Socket.IO for instant communication. Implemented custom hooks and Zustand for efficient state management. Dockerized for deployment.',
+    technologies: ['React', 'Node', 'Express', 'MongoDB', 'Socket.IO', 'Zustand', 'Docker'],
+    category: 'fullstack',
+    githubLink: 'https://github.com/neerajnakka/Mern_ChatApp',
+    websiteLink: 'https://mern-chatapp-rfj5.onrender.com/',
   },
   {
     title: 'Cloud Infrastructure Automation',
-    description: 'Automated AWS infrastructure deployment using Terraform and CI/CD pipelines with GitHub Actions for seamless deployments.',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
-    technologies: ['AWS', 'Terraform', 'GitHub Actions', 'Docker', 'Kubernetes'],
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000',
+    description:
+      'Automated AWS infrastructure provisioning using Terraform with reusable modules for EC2, VPC, and S3. Integrated CI/CD with GitHub Actions for continuous deployment of cloud environments.',
+    technologies: ['AWS', 'Terraform', 'GitHub Actions', 'EC2', 'S3'],
+    category: 'devops',
     githubLink: 'https://github.com/neerajnakka',
-    websiteLink: null,
-    category: 'devops'
+    websiteLink: '',
   },
   {
-    title: 'Real-Time Chat Application',
-    description: 'A responsive real-time chat application with Socket.io, featuring private messaging, group chats, and file sharing capabilities.',
-    image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&q=80',
-    technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'Redis'],
-    githubLink: 'https://github.com/neerajnakka',
-    websiteLink: 'https://example.com',
-    category: 'fullstack'
+    title: 'Netflix Clone using React',
+    image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=2000',
+    description: 'Built a Netflix clone with React, Tailwind CSS, and Firebase. Integrated React Router for seamless navigation and Firebase for authentication.',
+    technologies: ['React', 'Tailwind CSS', 'Firebase'],
+    githubLink: 'https://github.com/neerajnakka/NetflixReact_Clone',
+    websiteLink: 'https://netflix-clone-wi5g.onrender.com/',
   },
   {
-    title: 'Kubernetes Deployment Pipeline',
-    description: 'Complete CI/CD pipeline for containerized applications with automated testing, security scanning, and deployment to Kubernetes cluster.',
-    image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80',
-    technologies: ['Kubernetes', 'Docker', 'Jenkins', 'Prometheus', 'Grafana'],
-    githubLink: 'https://github.com/neerajnakka',
-    websiteLink: null,
-    category: 'devops'
-  }
+    title: 'Modern Portfolio with 3D Animations',
+    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2000',
+    description:
+      'Designed and developed a modern portfolio website featuring smooth animations, 3D effects powered by Three.js, and a sleek user interface. Leveraged Tailwind CSS for responsive design, React for dynamic interactivity, and Zustand for state management. The site incorporates Framer Motion for fluid transitions.',
+    technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion', 'Zustand', 'HTML', 'CSS'],
+    githubLink: 'https://github.com/neerajnakka/Neeraj_Portfolio',
+    websiteLink: 'https://neerajnakka.onrender.com/',
+  },
+  {
+    title: 'Portfolio Website',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000',
+    description: 'Dynamic React portfolio showcasing projects with Tailwind CSS design and Framer Motion animations.',
+    technologies: ['Tailwind CSS', 'React.js', 'React Router Dom', 'Framer Motion'],
+    githubLink: 'https://github.com/neerajnakka/PortFolio_React/tree/master',
+    websiteLink: 'https://neerajchandra.onrender.com/',
+  },
 ];
 
 export const CONTACT = {
